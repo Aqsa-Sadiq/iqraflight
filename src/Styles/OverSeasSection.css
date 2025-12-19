@@ -1,0 +1,127 @@
+.overseas-wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading + Search Wrapper */
+.heading-filter-wrapper {
+  display: flex;
+  flex-direction: column; /* stack heading & search on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* space between heading and search */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1229f8;
+}
+
+.search-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #f3f5ff;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  border-color: #1c278a;
+  box-shadow: 0 0 8px rgba(28, 39, 138, 0.2);
+}
+
+/* Card grid (already fine) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-content .sub {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.card-content .price {
+  margin: 0;
+  font-weight: bold;
+  color: #1c278a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 28px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 24px;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+  }
+}
